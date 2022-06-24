@@ -13,6 +13,7 @@ def read_excel(file: str, sheet_name: str) -> pd.DataFrame:
     return df
 
 cliente = read_excel(DATA_RAW, 'Cliente')
+descuento = read_excel(DATA_RAW, 'Descuento')
+ventas = read_excel(DATA_RAW, 'Ventas')
 
-
-print(cliente.head())
+print(ventas.head())
