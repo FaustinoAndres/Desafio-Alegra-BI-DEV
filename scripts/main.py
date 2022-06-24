@@ -16,6 +16,8 @@ cliente = read_excel(DATA_RAW, 'Cliente')
 descuento = read_excel(DATA_RAW, 'Descuento')
 ventas = read_excel(DATA_RAW, 'Ventas')
 
+ventas['ID'] = pd.Series([i for i in range(1, len(ventas)+1)])
+
 cliente.to_csv(str(SPLIT_DF)+'/cliente.csv', index=False)
 descuento.to_csv(str(SPLIT_DF)+'/descuento.csv', index=False)
-ventas.to_csv(str(SPLIT_DF)+'/ventas.csv', index=True)
+ventas.to_csv(str(SPLIT_DF)+'/ventas.csv', index=False)
