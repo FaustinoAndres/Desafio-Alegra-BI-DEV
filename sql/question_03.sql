@@ -1,5 +1,5 @@
 SELECT segmento AS "Segmento",
-	ROUND(SUM(cantidad*precio_unitario*DESCUENTO.descuento)) AS "perdidas por desciuento",
+	ROUND(SUM(cantidad*precio_unitario*DESCUENTO.descuento)) AS "perdidas por descuento",
 	ROUND(100.*SUM(cantidad*precio_unitario*DESCUENTO.descuento)/SUM(cantidad*precio_unitario)) AS "ratio",
 	COUNT(VENTAS.ID) AS "Número de pedidos"
 FROM VENTAS
